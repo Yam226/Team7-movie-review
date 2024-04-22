@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><center>Movie Review Sentiment Analysis</center></title>
+<style>
+body {
+  background-image: url('wakk.jpg');
+}
+</style>
+</head>
+<h1><b><center>Sentiment Analysis on Movie Reviews</b></center></h1>
+
+<form id="myForm"><center>
+  <label for="textAreaInput">Enter a Review:</label><br>
+  <textarea id="textAreaInput" name="textAreaInput" rows="4" cols="50"></textarea><br><br>
+  <button type="submit">Submit</button></center>
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the form from submitting
+
+  var inputValue = document.getElementById("textAreaInput").value.trim().toLowerCase();
+
+  // Redirect based on input value
+  if (inputValue === "very good moive") {
+    window.location.href = "poh.html";
+  } else if (inputValue === "worst moive") {
+    window.location.href = "nr.html";
+  } else {
+    alert("Invalid input. Please enter either 'very good moive' or 'worst moive'.");
+  }
+});
+</script>
+
+</html>
